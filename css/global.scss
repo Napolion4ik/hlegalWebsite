@@ -1,0 +1,41 @@
+@import "vars";
+@import "font";
+
+body {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Montserrat-Regular";
+}
+
+.main {
+    color: $color-accent;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+}
+
+.global__title {
+    @extend %gradient-title;
+    font-size: 30px;
+    line-height: 37px;
+    font-family: "Montserrat-Bold";
+}
+
+.global__link {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    color: $color-services;
+    text-transform: uppercase;
+    font-family: "Montserrat-Bold";
+    &:hover {
+        color: $color-accent;
+    }
+}
+
+.active {
+    background: $color-accent;
+    border-radius: 8px;
+}

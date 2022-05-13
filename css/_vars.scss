@@ -1,0 +1,52 @@
+/***********COLOR************/ 
+$color-accent: #F0145A;
+$color-separator: #E6E6F0;
+$color-services: #24A3FF;
+$color-bacground: #F5F5FA;
+$color-tipycal: #B3B3BA;
+
+/***********GRADIENT**************/ 
+%gradient-link {
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+%gradient-title {
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+%trait {
+    content: "";
+        width: 4px;
+        height: 26px;
+        background: #F0145A;
+        display: block;
+        position: absolute;
+        right: 0;
+        transform: skew(-15deg);
+}
+
+@media (min-width:768px) {
+    %trait {
+            width: 6px;
+            height: 46px;
+            transform: skew(-15deg);
+    }
+}
+/*********MIXIN**********/ 
+@mixin dots($margin,$color) {
+    content: "";
+                width: 6px;
+                height: 6px;
+                display: block;
+                border-radius: 50%;
+                background: $color;
+                margin: $margin;
+}
+
+
+
+

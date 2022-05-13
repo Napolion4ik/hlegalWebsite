@@ -1,0 +1,405 @@
+
+@import "vars";
+@import "font";
+@import "global";
+
+/**************HEADER*************/ 
+@import "loyaut/header";
+
+/***************HEADER-MODIFICATION*******************/ 
+.header__container {
+    .desc {
+        .modal {
+            background: $color-bacground;
+            &__lang {
+                &-pick {
+                    color: $color-tipycal;
+                }
+                &--active {
+                    color: #fff;
+                }
+            }
+            &__phone{
+                &-number {
+                    color: $color-tipycal;
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    &__link {
+        color: $color-services;
+    }
+}
+
+.menu-burger__header span, 
+.menu-burger__header:after, 
+.menu-burger__header:before{
+        background: #323264;
+    }
+
+.logo {
+    position: relative;
+    display: flex;
+    &::after {
+        @extend %trait;
+    }
+    &::before {
+        content: "about us";
+        position: absolute;
+        right: -97px;
+        font-size: 20px;
+        line-height: 24px;
+        color: $color-tipycal;
+    }
+}
+
+.active-link {
+    color: $color-accent;
+    border-bottom: 2px solid $color-accent;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        &::after {
+            width: 6px;
+            height: 47px;
+        }
+        &::before {
+            right: -173px;
+            font-size: 36px;
+            line-height: 44px;
+        }
+    }
+    .header__container {
+        .desc {
+            .modal {
+                background: none;
+                &__address {
+                    color: $color-tipycal;
+                }
+                &__phone{
+                    &-number {
+                        color: $color-tipycal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/************ABOUT************/ 
+.about {
+    padding: 132px 0 30px 0;
+    &__container {
+        padding: 0 30px;
+    }
+    &__text {
+        font-size: 19px;
+        line-height: 30px;
+    }
+    .about-decription {
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__text {
+            margin-bottom: 30px;
+        }
+    }
+    &-achiev {
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            font-size: 36px;
+            line-height: 44px;
+            font-family:"Montserrat-Bold";
+        }
+        &__item {
+            padding-left: 34px;
+            border-left: 4px solid #E6E6F0;
+            &:not(:first-child) {
+                padding-top: 40px;
+            }
+        }
+        &__value {
+            margin-left: 10px;
+            @extend %gradient-title;
+        }
+        &__info {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media (min-width:768px ) {
+    .about {
+        padding: 280px 0 60px 0;
+        &__container {
+            padding: 0 60px;
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .about {
+        padding: 176px 0 60px 0;
+        &__wrapper {
+            display: flex;
+        }
+        .about-decription {
+            margin-right: 30px;
+            width: 50%;
+            &__text {
+                margin-bottom: 0;
+                &:last-child {
+                    padding-top: 30px;
+                }
+            }
+        }
+        &-achiev {
+            &__value {
+                margin-left: 10px;
+            }
+            &__info {
+                margin-top: 10px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    
+}
+
+@media (min-width:1440px) {
+    .about {
+        &__container {
+            padding: 0 180px;
+        }
+    }
+}
+
+@media (min-width:1920px) {
+    .about {
+        &__container {
+            padding: 0 280px;
+        }
+    }
+}
+
+/**********TEAM********/
+.team {
+    width: 100%;
+    height: 114px;
+    background-image: url('../img/about-team.jpg');
+    background-size: cover;
+    position: relative;
+    .bacground__title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        opacity: 0.8;
+        text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+        font-family:"Montserrat-Bold";
+        letter-spacing: 13px;
+        font-size: 36px;
+        line-height: 44px;
+    }
+} 
+
+@media (min-width:768px) {
+    .team {
+        height: 233px;
+        .bacground__title {
+            left: 53%;
+            letter-spacing: 63px;
+            font-size: 46px;
+            line-height: 56px;
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .team {
+        height: 311px;
+        .bacground__title {
+            font-size: 86px;
+            line-height: 105px;
+        }
+    }
+}
+
+@media (min-width:1440px) {
+    .team {
+        height: 438px;
+        .bacground__title {
+            font-size: 96px;
+            line-height: 117px;
+        }
+    }
+}
+
+@media (min-width:1920px) {
+    .team {
+        width: 1920px;
+        height: 584px;
+        margin: 0 auto;
+    }
+}
+
+/************INFORMATION**************/ 
+.information {
+    &__container {
+        padding: 30px 30px 60px 30px;
+    }
+    &__text {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width:768px) {
+    .information {
+        &__container {
+            padding: 60px;
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .information {
+        &__container {
+            padding: 60px;
+            display: flex;
+        }
+        &__content {
+            width: 57%;
+        }
+        &__caption {
+            width: 50%;
+            padding-left: 60px;
+        }
+        &__title {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+}
+
+@media (min-width:1440px) {
+    .information {
+        &__container {
+            display: flex;
+            padding: 60px 180px;
+        }
+        &__content {
+            width: 81%;
+        }
+    }
+}
+
+@media (min-width:1920px) {
+    .information {
+        &__container {
+            display: flex;
+            padding: 60px 280px;
+        }
+        &__content {
+            width: 100%;
+        }
+    }
+}
+
+/*************achievements*****************/ 
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+}
+
+.achievements {
+    background: $color-bacground;
+    &__container {
+        padding: 30px 60px  0 60px;
+        text-align: center;
+    }
+    &__title {
+        line-height: 17px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family:"Montserrat-Bold";
+        color: #323264;
+    }
+    &__item {
+        width: 100%;
+        height: 90px;
+        background: #fff;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__swiper {
+        position: relative;
+        padding: 30px 0 46px 0;
+    }
+    &__dots {
+        position: absolute;
+        top: 89%;
+    }
+}
+
+@media (min-width:768px) {
+    .achievements {
+        &__item {
+            width: 132px;
+        }
+        &__img {
+            width: 90%;
+            height: 40px;
+        }
+    }
+
+}
+@media (min-width:1024px) {
+    .achievements {
+        &__item {
+            width: 196px;
+            height: 110px;
+        }
+        &__img {
+            width: 85%;
+            height: 70px;
+        }
+    }
+    
+}
+
+@media (min-width:1440px) {
+    .achievements {
+        &__item {
+            width: 300px;
+        }
+        &__img {
+            width: 60%;
+        }
+    }
+}
+
+@media (min-width:1920px) {
+    .achievements {
+        &__item {
+            width: 370px;
+        }
+        &__img {
+            width: auto;
+        }
+    }
+}
+
+/**************FOOTER****************/ 
+@import "loyaut/footer"
